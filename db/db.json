@@ -1,0 +1,108 @@
+{
+  "invoices": [
+    {
+      "id": "1",
+      "internalNumber": "1",
+      "proFormaInvoiceDate": "20/07/2017",
+      "finalInvoiceDate": "25/07/2017",
+      "provider": {
+        "name": "ciprian"
+      },
+      "activitiesValue": 29,
+      "grossTotal": 32,
+      "invoiceStatus": "Invoice Created",
+      "paymentStatus": "Fully Paid"
+    },
+    {
+      "id": "2",
+      "internalNumber": "2",
+      "proFormaInvoiceDate": "20/07/2017",
+      "finalInvoiceDate": "25/07/2017",
+      "provider": {
+        "name": "ciprian"
+      },
+      "activitiesValue": 29,
+      "grossTotal": 32,
+      "invoiceStatus": "Invoice Created",
+      "paymentStatus": "Invoice Sent"
+    },
+    {
+      "id": "3",
+      "internalNumber": "3",
+      "proFormaInvoiceDate": "20/07/2017",
+      "finalInvoiceDate": "25/07/2017",
+      "provider": {
+        "name": "laura"
+      },
+      "activitiesValue": 29,
+      "grossTotal": 32,
+      "invoiceStatus": "Invoice Created",
+      "paymentStatus": "Fully Paid"
+    },
+    {
+      "id": "4",
+      "internalNumber": "4",
+      "proFormaInvoiceDate": "20/07/2017",
+      "finalInvoiceDate": "25/07/2017",
+      "provider": {
+        "name": "ciprian"
+      },
+      "activitiesValue": 29,
+      "grossTotal": 32,
+      "invoiceStatus": "Invoice Created",
+      "paymentStatus": "Not Paid"
+    },
+    {
+      "id": "5",
+      "internalNumber": "5",
+      "proFormaInvoiceDate": "20/07/2017",
+      "finalInvoiceDate": "25/07/2017",
+      "provider": {
+        "name": "andrei"
+      },
+      "activitiesValue": 29,
+      "grossTotal": 32,
+      "invoiceStatus": "Invoice Sent",
+      "paymentStatus": "Fully Paid"
+    },
+    {
+      "id": "6",
+      "internalNumber": "6",
+      "proFormaInvoiceDate": "20/07/2017",
+      "finalInvoiceDate": "25/07/2017",
+      "provider": {
+        "name": "ciprian"
+      },
+      "activitiesValue": 29,
+      "grossTotal": 32,
+      "invoiceStatus": "Invoice Created",
+      "paymentStatus": "Not Paid"
+    },
+    {
+      "id": "7",
+      "internalNumber": "7",
+      "proFormaInvoiceDate": "20/07/2017",
+      "finalInvoiceDate": "25/07/2017",
+      "provider": {
+        "name": "ciprian"
+      },
+      "activitiesValue": 29,
+      "grossTotal": 32,
+      "invoiceStatus": "Invoice Created",
+      "paymentStatus": "Fully Paid"
+    },
+    {
+      "id": "8",
+      "internalNumber": "8",
+      "proFormaInvoiceDate": "20/07/2017",
+      "finalInvoiceDate": "25/07/2017",
+      "provider": {
+        "name": "ciprian"
+      },
+      "activitiesValue": 29,
+      "grossTotal": 32,
+      "invoiceStatus": "Invoice Sent",
+      "paymentStatus": "Fully Paid"
+    }
+  ]
+}
