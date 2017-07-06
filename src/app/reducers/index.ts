@@ -22,5 +22,4 @@ export const reducer: ActionReducer<State> = combineReducers(reducers);
 // Item selector functions
 const getInvoicesState = (state: State) => state.invoices;
 export const getInvoices = createSelector(getInvoicesState, fromInvoice.getInvoices);
-
-
+export const getInvoiceError = createSelector(getInvoicesState, fromInvoice.getInvoiceError);

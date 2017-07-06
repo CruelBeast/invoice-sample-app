@@ -14,11 +14,13 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { UcsSurveyStateEffects } from './effects/effects';
+import { ErrorReportComponent } from './views/error-report/error-report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InvoicesComponent
+    InvoicesComponent,
+    ErrorReportComponent
   ],
   imports: [
     BrowserModule,

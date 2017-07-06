@@ -4,10 +4,12 @@ import * as decode from '../actions/decode';
 
 export interface State {
   invoices: Invoice[];
+  error: Error | null;
 }
 
 export const initialState: State = {
-  invoices: []
+  invoices: [],
+  error: null
 };
 
 export function reducer(state = initialState, action: decode.Actions): State {
@@ -19,7 +21,7 @@ export function reducer(state = initialState, action: decode.Actions): State {
 
     case decode.INVOICES_ERROR:
       console.log(action.payload);
-      return state;
+      return {...state, error: action.payload};
 
 
     default:
@@ -28,3 +30,4 @@ export function reducer(state = initialState, action: decode.Actions): State {
 }
 
 export const getInvoices = (state: State) => state.invoices;
+export const getInvoiceError = (state: State) => state.error;

@@ -1,0 +1,5 @@
+<div class="container mt-5">
+  <h1 class="mb-4 text-danger">Ooops! Error!</h1>
+  <h5 class="text-muted">Please include the following content in the error report. Click on the input below and press Ctrl+C to copy its content.</h5>
+  <textarea class="form-control" id="text-area" rows="3" (click)="$event.target.select()">{{error.message}}</textarea>
+</div>

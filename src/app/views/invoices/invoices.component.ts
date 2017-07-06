@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import { Invoice } from '../../models/invoice';
 import { InvoiceService } from '../../services/invoice.service';
-import { State } from '../../reducers/index';
+import { getInvoiceError, State } from '../../reducers/index';
 import * as fromDecode from '../../actions/decode';
 import { getInvoices } from '../../reducers/index';
 
@@ -17,6 +17,7 @@ import { Ng2SmartTableModule, LocalDataSource } from 'ng2-smart-table';
 export class InvoicesComponent implements OnInit {
 
   invoices$: Observable<Invoice[]>;
+  invoiceError$: Observable<Error>;
   private invoiceService: InvoiceService;
 
 
@@ -24,7 +25,7 @@ export class InvoicesComponent implements OnInit {
     this.invoiceService = invoiceService;
     this.getInvoices();
     this.invoices$ = store$.select(getInvoices);
-
+    this.invoiceError$ = store$.select(getInvoiceError);
   }
 
   getInvoices() {
