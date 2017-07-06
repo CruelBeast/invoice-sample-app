@@ -1,3 +1,4 @@
 <div *ngFor="let invoice of invoices$ | async">{{invoice | json}}</div>
 
 <app-error-report *ngIf="invoiceError$ | async" [error]="invoiceError$ | async"></app-error-report>
+<app-error-report *ngIf="apiError" [error]="apiError"></app-error-report>

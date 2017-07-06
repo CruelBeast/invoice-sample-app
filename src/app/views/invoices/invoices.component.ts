@@ -18,6 +18,7 @@ export class InvoicesComponent implements OnInit {
 
   invoices$: Observable<Invoice[]>;
   invoiceError$: Observable<Error>;
+  apiError: Error;
   private invoiceService: InvoiceService;
 
 
@@ -34,7 +35,7 @@ export class InvoicesComponent implements OnInit {
         console.log(invoices);
         this.loadInvoices(invoices);
       },
-      error => console.log(error)
+      error => this.apiError = {...error, message: 'INVOICE API RESPONSE: ' + error.message}
     );
   }
   loadInvoices(invoices: Invoice[]) {
