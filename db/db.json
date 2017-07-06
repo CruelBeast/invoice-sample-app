@@ -62,7 +62,7 @@
       },
       "activitiesValue": 29,
       "grossTotal": 32,
-      "invoiceStatus1": "Invoice Sent",
+      "invoiceStatus": "Invoice Sent",
       "paymentStatus": "Fully Paid"
     },
     {

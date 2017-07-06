@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import { Invoice } from '../../models/invoice';
@@ -8,18 +8,21 @@ import * as fromDecode from '../../actions/decode';
 import { getInvoices } from '../../reducers/index';
 
 import { Ng2SmartTableModule, LocalDataSource } from 'ng2-smart-table';
+import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/takeUntil';
 
 @Component({
   selector: 'app-invoices',
   templateUrl: './invoices.component.html',
   styleUrls: ['./invoices.component.css']
 })
-export class InvoicesComponent implements OnInit {
+export class InvoicesComponent implements OnInit, OnDestroy {
 
   invoices$: Observable<Invoice[]>;
   invoiceError$: Observable<Error>;
   apiError: Error;
   private invoiceService: InvoiceService;
+  private ngUnsubscribe: Subject<void> = new Subject<void>();
 
 
   constructor(private store$: Store<State>, invoiceService: InvoiceService) {
@@ -30,7 +33,7 @@ export class InvoicesComponent implements OnInit {
   }
 
   getInvoices() {
-    this.invoiceService.getInvoices().subscribe(
+    this.invoiceService.getInvoices().takeUntil(this.ngUnsubscribe).subscribe(
       invoices  => {
         console.log(invoices);
         this.loadInvoices(invoices);
@@ -45,4 +48,9 @@ export class InvoicesComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  ngOnDestroy() {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
+  }
 }
